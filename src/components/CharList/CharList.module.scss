@@ -1,0 +1,14 @@
+
+.charList{
+  z-index: 1;
+  .card-deck .card{
+    width: 25%;
+    flex: none;
+  }
+}
+
+.charInfo{
+  display: block;
+  margin-bottom: 15px;
+  border: 2px solid red;
+}

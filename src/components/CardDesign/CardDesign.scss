@@ -1,0 +1,102 @@
+@mixin status-dot($color) {
+  color: $color;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+
+.cartDesign {
+  background: #edc7b7;
+  font-weight: bold;
+  color: #ac3b61;
+  height: 560px;
+  position: relative;
+  .charName {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: inherit;
+    color: white;
+    background: #e27d60;
+    font-size: 1rem;
+    .name {
+      font-weight: bold;
+    }
+    .status {
+      .dead {
+        @include status-dot(red);
+      }
+      .alive {
+        @include status-dot(green);
+        color: green;
+      }
+      .unknown {
+        @include status-dot(yellow);
+      }
+    }
+  }
+  .imgContainer {
+    width: inherit;
+    height: auto;
+    padding-top: 4rem;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: darkred;
+    font-weight: bold;
+    color: wheat;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cartDesign {
+    height: 540px;
+    border-left: 1px solid #404040;
+  }
+  .cartDesign .charName .name {
+    font-size: 1rem;
+  }
+  .cartDesign .charName strong {
+    font-size: 0.8rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .cartDesignGrid {
+    padding: 0;
+    margin: 0;
+  }
+  .cartDesign .imgContainer {
+    padding-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .cartDesignGrid {
+    margin: 0;
+    padding: 0.3em;
+  }
+}
+
+body {
+  background-color: #eceff1;
+  color: #37474f;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+h1,
+h2,
+h3 {
+  font-weight: 200;
+}

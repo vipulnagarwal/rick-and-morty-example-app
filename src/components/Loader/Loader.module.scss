@@ -1,0 +1,30 @@
+.loader {
+  display: block;
+  width: inherit;
+  text-align: center;
+  margin-top: 20px;
+  .faSpinnerRotate {
+    animation: fa-spin-rotate 2s infinite linear;
+  }
+}
+
+@-webkit-keyframes fa-spin-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}

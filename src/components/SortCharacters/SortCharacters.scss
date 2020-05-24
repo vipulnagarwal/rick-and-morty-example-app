@@ -1,0 +1,18 @@
+fieldset {
+  text-align: right;
+  margin: 10px 10px;
+  height: 30px;
+  padding-right: 40px;
+  label {
+    margin-right: 10px;
+  }
+  select {
+    border: 2px solid grey;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  fieldset {
+    text-align: center;
+  }
+}
